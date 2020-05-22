@@ -30,7 +30,7 @@ plot4 <- function () {
         hpc <<- mutate (hpcI, DateTime = as.POSIXct (strptime (paste (hpcI$Date, hpcI$Time), format = "%d/%m/%Y %H:%M:%S")))
         rm (hpcRawData)
         
-        png (filename = "plot3.png", width = 480, height = 480)
+        png (filename = "plot4.png", width = 480, height = 480)
         par (mfrow = c(2,2))
         plot (hpc$DateTime, hpc$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power")
         plot (hpc$DateTime, hpc$Voltage, type = "l", xlab = "datetime", ylab = "Voltage")
